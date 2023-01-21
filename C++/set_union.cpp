@@ -2,51 +2,65 @@
 #define MAX 100
 using namespace std;
 
-int main()
+int create(int *setA,int &a)
 {
-   int setA[MAX],setB[MAX],setC[MAX],a,b,c=0;
-
-   cout << "Enter the number of element of set A:";
+   cout << "Enter the number of elements: ";
    cin >> a;
-
-   cout << "Enter the elements of set A:" << endl;
+   cout << "Enter the elements of set: " << endl;
    for (int i=0;i<a;i++)
    {
       cin >> setA[i];
    }
+}
 
-   cout << "Enter the number of element of set B:";
-   cin >> b;
-
-   cout << "Enter the elements of set B:" << endl;
-   for (int i=0;i<b;i++)
+int print(int *setA,int &a)
+{
+   int i;
+   cout << "{";
+   for (i=0;i<a-1;i++)
    {
-      cin >> setB[i];
+      cout << setA[i] << ",";
    }
+   cout << setA[i] << "}";
+}
 
+int main()
+{
+   int setA[MAX],setB[MAX],setC[MAX],a,b,c=0,i,j;
 
-   for (int i=0;i<a;i++)
+   cout << "Set A" << endl;
+   create(setA,a);
+   cout << "\nSet B" << endl;
+   create(setB,b);
+
+   cout << "\nA: ";
+   print(setA,a);
+   cout << "\nB: ";
+   print(setB,b);
+
+   // UNION FUNCTION
+   for (i=0;i<a;i++)
    {
       setC[c] = setA[i];
       c++;
    }
 
-   for (int j=0;j<b;j++)
+   for (i=0;i<b;i++)
    {
-      if (setC[j] != setB[j])
+      for (j=0;j<a;j++)
       {
-         setC[c] = setB[j];
+         if (setC[j] == setB[i])
+         {
+            break;
+         }
+      }
+      if (setC[j] != setB[i])
+      {
+         setC[c] = setB[i];
          c++;
       }
    }
-
-
-   for (int i=0;i<c;i++)
-   {
-      cout << setC[i] << " ";
-   }
-
-
-
+   cout << "\nUnion: ";
+   print(setC,c);
    return 0;
 }
