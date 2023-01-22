@@ -52,7 +52,7 @@ int main()
       }
    }
 
-   cout << "\nIntersection: ";
+   cout << "\nIntersection: ";                     
    cout << "{";
    for (i=0;i<c-1;i++)
    {
@@ -61,12 +61,3 @@ int main()
    cout << setC[i] << "}";
    return 0;
 }
-
-
-
-
-
-
-
-
-

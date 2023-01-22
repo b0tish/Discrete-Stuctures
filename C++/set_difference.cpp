@@ -59,12 +59,3 @@ int main()
    print(setC,c);
    return 0;
 }
-
-
-
-
-
-
-
-
-
