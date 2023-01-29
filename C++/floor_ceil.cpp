@@ -8,7 +8,6 @@ int main()
 	SetConsoleOutputCP(CP_UTF8);
 	float a,b;
 
-	cout << "===Floor and Ceiling Function===" << endl;
 	cout << "Enter the first number:";
 	cin >> a;
 	cout << "Enter the second number:";
@@ -18,6 +17,5 @@ int main()
 	cout << "⌈" << a << "⌉: " << ceil(a) << endl;
 	cout << "⌊" << b << "⌋: " << floor(b) << endl;
 	cout << "⌈" << b << "⌉: " << ceil(b) << endl;
-	cout << "======Made By:Saugat Maharjan======";
     return 0;
 }
