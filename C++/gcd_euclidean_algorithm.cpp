@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int gcd(int a,int b)
 {
 	int r = 0;
@@ -21,6 +20,6 @@ int main()
 	cin >> num1;
 	cout << "Enter the second number:";
 	cin >> num2;
-	cout << "GCD("<< num1 << "," << num2 << "): " << gcd(num1,num2);
+	cout << "GCD("<< num1 << "," << num2 << "): " << gcd(num1,num2) << endl;
 	return 0;
 }
