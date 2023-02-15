@@ -20,3 +20,4 @@ int main()
 		cout << fib(i) << " ";
 	return 0;
 }
+
